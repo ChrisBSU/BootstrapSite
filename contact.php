@@ -23,7 +23,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -32,7 +32,7 @@
           <li class="nav-item">
             <a class="nav-link" href="skills.html">Skills</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
         </ul>
@@ -87,7 +87,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-      <div class="jumbotron text-center stuffbg">
+      <div class="jumbotron text-center">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -97,7 +97,57 @@
             </div>
           </div>
         </div>
-      </div>        
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="container">
         <div class="row">
@@ -117,27 +167,54 @@
             <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
             <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
           </div>
-        </div>        
-    </section>
-    <hr>
-    <section class="stuffbg">
-      <div class="container">
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+        </div>
+        <hr>
         <div class="row">
-          <div class="col-12 text-center">
-            <h1>Get in touch</h1>
-            <p>Contact me to get your project started today.</p>
-            <button type="button" class="btn btn-success">Go --></button>
-          </div>
+          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
         </div>
       </div>
     </section>
     <hr>
+    <section>
+	<div class="wrapper"> 
+	<div id="contactform">
+    <div id="form-messages"></div>
+    <form id="ajax-contact" method="post" action="mailer.php">
+		<h3 class="text-center">GET IN TOUCH</h3>
+        <p class="text-center col-xl-12">
+            <label class="nametext text-center" for="name">NAME</label><br>
+            <input class="inputname text-center" type="text" name="name" id="name" <?php if (isset($_POST['name']) === true) { echo 'value="', strip_tags($_POST['name']), '"'; } ?>>
+        </p>
+        <p class="text-center col-xl-12">
+          <label class="mailtext" for="email">EMAIL</label><br>
+            <input class="inputmail" type="text" name="email" id="email" <?php if (isset($_POST['email']) === true) { echo 'value="', strip_tags($_POST['email']), '"'; } ?>>
+        </p>
+        <p class="text-center col-xl-12">
+            <label  class="note" for="message">MESSAGE</label><br>
+            <textarea class="textar" name="message" id="message"><?php if (isset($_POST['message']) === true) { echo strip_tags($_POST['message']); } ?></textarea>
+        </p>
+        <p class="text-center col-xl-12">
+            <input class="btn btn-success" type="submit" value="SUBMIT">
+        </p>
+    </form>
+</div>
+</div>
+</section>
+    <hr>
     <div class="section">
       <div class="container">
-        <div class="row">
-          
+        <div class="row">          
           <div class="col-md-4 col-12 col-xl-12">
-            <h3 class="text-center">INFO</h3>
+            
             <address class="text-center">
               <strong>Chris Hubler</strong><br>
               chrishubler@u.boisestate.edu<br>
