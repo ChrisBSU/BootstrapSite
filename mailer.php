@@ -17,7 +17,7 @@
         }
 
         // Set the recipient email address.
-        $recipient = "notplana@msn.com";
+        $recipient = "chrishubler@u.boisestate.edu";
 
         // Set the email subject.
         $subject = "New job offer from $name";
