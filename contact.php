@@ -43,19 +43,20 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h1>Contact Me&nbsp;</h1>
-              <p>Use this form to shoot me a message</p>              
+				<img class="img-fluid" src="images/chublerimage.png" alt="C_Hubler">
+              <h1>Chris Hubler</h1>
+              <p>&nbsp;I am currrently a Games, Interactive Media, Mobile Major at Boise State University with studies focued on Mixed Reality Interactive Media Development.&nbsp;&nbsp;</p>              
             </div>
           </div>
         </div>
       </div>
     </section>  
     <section>
-	<div class="wrapper"> 
+	<div class="wrapper"> 		
 	<div id="contactform">
     <div id="form-messages"></div>
     <form id="ajax-contact" method="post" action="mailer.php">
-		<h2 class="text-center"></h2>
+		<h2 class="text-center">Get In Touch</h2>
         <p class="text-center col-xl-12">
             <label class="nametext text-center" for="name">NAME</label><br>
             <input class="inputname text-center" type="text" name="name" id="name" <?php if (isset($_POST['name']) === true) { echo 'value="', strip_tags($_POST['name']), '"'; } ?>>
